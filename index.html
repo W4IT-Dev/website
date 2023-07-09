@@ -241,17 +241,7 @@
             text-decoration: underline;
         }
 
-        @media screen and (max-width: 768px) {
-            #about .about-img {
-                float: none;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-
-            #about .about-text {
-                text-align: center;
-            }
-        }
+      
 
         #app-modal {
             display: none;
@@ -367,6 +357,22 @@
         .btn-secondary:hover {
             background-color: #5a6268;
             border-color: #545b62;
+        }
+        @media only screen and (max-width: 400px) {
+            nav li {
+                margin: 0;
+            }
+            nav li a {
+                padding: 10px 5px;
+            }
+             section {
+                font-size: 13px !important;
+                line-break: anywhere;
+             }
+
+             section h1, section h2 {
+                font-size: 22px !important;
+             }
         }
     </style>
 
