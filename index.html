@@ -80,7 +80,7 @@
         }
 
         #apps {
-            display: flex;
+            
             padding: 50px;
             scroll-margin-top: 70px;
             background-color: #f8f8f8;
@@ -91,6 +91,10 @@
         }
 
         #app-container {
+            display: flex;
+        }
+
+        .app-container-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -415,8 +419,9 @@
 
         <section id="apps">
             <h1>All apps published by me</h1>
-            <div id="app-container">
-                <div class="app-container" data-version="1.1.1" data-icon="falling-numbers" data-release="2023/05/16" data-size="1.45MB"
+            <div id="apps-container">
+            <div class="app-container-container">
+                <div class="app-container" data-version="1.1.1" data-icon="falling-numbers.png" data-release="2023/05/16" data-size="1.45MB"
                 data-category="Games"
                 data-kaistorelink="https://www.kaiostech.com/store/apps/?bundle_id=com.kaiostech.fallingnumbers"
                 data-githublink="https://github.com/W4IT-Dev/Falling-Numbers"
@@ -427,8 +432,8 @@
                     <button class="btn btn-primary app-download-button">Download Now</button>
                 </div>
             </div>
-            <div id="app-container">
-                <div class="app-container" data-version="1.0.0" data-icon="icon" data-release="2023/11/05" data-size="0.08MB"
+            <div class="app-container-container">
+                <div class="app-container" data-version="1.0.0" data-icon="icon.png" data-release="2023/11/05" data-size="0.08MB"
                 data-category="Utilities"
                 data-kaistorelink="https://www.kaiostech.com/store/apps/?bundle_id=kaios.app.batterymanager"
                 data-githublink="https://github.com/W4IT-Dev/Battery-manager/tree/main"
@@ -438,6 +443,7 @@
                     <p>Battery insights and custom alerts.</p>
                     <button class="btn btn-primary app-download-button">Download Now</button>
                 </div>
+            </div>
             </div>
         </section>
         <hr>
