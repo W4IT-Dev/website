@@ -80,6 +80,7 @@
         }
 
         #apps {
+            display: flex;
             padding: 50px;
             scroll-margin-top: 70px;
             background-color: #f8f8f8;
@@ -432,7 +433,7 @@
                 data-kaistorelink="https://www.kaiostech.com/store/apps/?bundle_id=kaios.app.batterymanager"
                 data-githublink="https://github.com/W4IT-Dev/Battery-manager/tree/main"
                 data-description="View battery information such as health, temperatur charging- and discharging time and more and set an alarm if your battey level goes above a customizable percentage. ">
-                <img src="falling-numbers.png" height="120px" alt="App Icon">
+                <img src="icon.png" height="120px" alt="App Icon">
                     <h2>Battery Manager</h2>
                     <p>Battery insights and custom alerts.</p>
                     <button class="btn btn-primary app-download-button">Download Now</button>
@@ -503,6 +504,7 @@
                 const descriptionEl = appModalContent.querySelector("p");
 
                 descriptionEl.textContent = description;
+                appModalContent.querySelector("img").src = icon;
                 appModalContent.querySelector("div #publishedOn").textContent = "Published on: " + published;
                 appModalContent.querySelector("div #category").texContent = "Category: " + category;
                 appModalContent.querySelector("div #size").textContent = "Size: " + size;
