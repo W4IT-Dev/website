@@ -415,7 +415,7 @@
         <section id="apps">
             <h1>All apps published by me</h1>
             <div id="app-container">
-                <div class="app-container" data-icon="falling-numbers" data-release="2023/05/16" data-size="1.45MB"
+                <div class="app-container" data-version="1.1.1" data-icon="falling-numbers" data-release="2023/05/16" data-size="1.45MB"
                 data-category="Games"
                 data-kaistorelink="https://www.kaiostech.com/store/apps/?bundle_id=com.kaiostech.fallingnumbers"
                 data-githublink="https://github.com/W4IT-Dev/Falling-Numbers"
@@ -427,7 +427,7 @@
                 </div>
             </div>
             <div id="app-container">
-                <div class="app-container" data-icon="icon" data-release="2023/11/05" data-size="0.08MB"
+                <div class="app-container" data-version="1.0.0" data-icon="icon" data-release="2023/11/05" data-size="0.08MB"
                 data-category="Utilities"
                 data-kaistorelink="https://www.kaiostech.com/store/apps/?bundle_id=kaios.app.batterymanager"
                 data-githublink="https://github.com/W4IT-Dev/Battery-manager/tree/main"
@@ -458,16 +458,16 @@
                 <h2>App Title</h2>
                 <p>Long app description goes here...</p>
                 <div class="app-details">
-                    <p>Published on:
+                    <p id="publishedOn">Published on:
                         2023/05/16</p>
                     
-                    <p>Category: Games</p>
-                    <p>Size: 0.36MB</p>
-                    <p>Version: 1.1.0</p>
+                    <p id="category">Category: Games</p>
+                    <p id="size">Size: 0.36MB</p>
+                    <p id="version">Version: 1.1.0</p>
                 </div>
                 <div class="app-modal-download">
-                    <a href="https://www.kaiostech.com/store/apps/?bundle_id=kaios.app.fallingnumbers" target="_blank" class="btn btn-primary">Download on the KaiStore</a>
-                    <a href="https://github.com/W4IT-Dev/Falling-Numbers" target="_blank" class="btn btn-primary">View GitHub repo</a>
+                    <a id="kaistoreLink" href="https://www.kaiostech.com/store/apps/?bundle_id=kaios.app.fallingnumbers" target="_blank" class="btn btn-primary">Download on the KaiStore</a>
+                    <a id="githubLink" href="https://github.com/W4IT-Dev/Falling-Numbers" target="_blank" class="btn btn-primary">View GitHub repo</a>
                 </div>
             </div>
         </div>
@@ -495,12 +495,20 @@
                 const published = parentDiv.dataset.published;
                 const kaistorelink = parentDiv.dataset.kaistorelink;
                 const githublink = parentDiv.dataset.githublink;
+                const version = parentDiv.dataset.version;
+                const category = parentDiv.dataset.category
 
                 // Update the app-modal content with the description
                 const appModalContent = appModal.querySelector(".app-modal-content");
                 const descriptionEl = appModalContent.querySelector("p");
 
                 descriptionEl.textContent = description;
+                appModalContent.querySelector("div #publishedOn").textContent = "Published on: " + published;
+                appModalContent.querySelector("div #category").texContent = "Category: " + category;
+                appModalContent.querySelector("div #size").textContent = "Size: " + size;
+                appModalContent.querySelector("div #version").textCongent = "Version: " + version;
+                appModalContent.querySelector("div div #kaistoreLink").href = kaistorelink;
+                appModalContent.querySelector("div div #githubLink").href = githublink;
 
             });
         });
