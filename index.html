@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>W4IT Dev</title>
+    <title>W4IT Dev</title>ß
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -493,11 +493,12 @@
                 modalTitle.textContent = parentDiv.querySelector("h2").textContent;
                 const description = parentDiv.dataset.description;
                 const icon = parentDiv.dataset.icon;
-                const published = parentDiv.dataset.published;
+                const published = parentDiv.dataset.release;
                 const kaistorelink = parentDiv.dataset.kaistorelink;
                 const githublink = parentDiv.dataset.githublink;
                 const version = parentDiv.dataset.version;
-                const category = parentDiv.dataset.category
+                const category = parentDiv.dataset.category;
+                const size = parentDiv.dataset.size;
 
                 // Update the app-modal content with the description
                 const appModalContent = appModal.querySelector(".app-modal-content");
